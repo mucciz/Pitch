@@ -1,6 +1,6 @@
 
 class Config:
-    pass
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://deathstar:deathstar@localhost/pitch'
 
 class ProdConfig(Config):
     pass
