@@ -1,33 +1,59 @@
-# FLASK_STRUCTURE
-this is a script to every lazy developer or any other that seeks to save time creating the whole flask structure
+# Pitches
 
-## SETUP
+## Description
+This is a web application that allows users to sign up, log in ad post pitches which other users can ccomment on, upvote or downvote. They can choose which category to write a pitch in and can view and comment on other users' pitches.
 
-### clone this repository
+### By: Mucciz
 
-``` $ git clone https://github.com/boydndonga/FLASK_STRUCTURE.git ```
+## Prerequisites
+1. python3.6
+2. pip
+3. Virtual environment(virtualenv)
 
-### make sure you are at its required level
+## Cloning and running
+Clone the application using git clone(this copies the app onto your device). In your terminal:
 
-``` $ cd FLASK_STRUCTURE```
+    $ git clone https://github.com/mucciz/Pitch.git
+    $ cd pitches
+    
+Creating the virtual environment
 
-### make it executable
+    $ python3.6 -m venv --without-pip virtual
+    $ source virtual/bin/env
+    $ curl https://bootstrap.pypa.io/get-pip.py | python
+    
+Installing Flask and other Modules
 
-``` $ chmod +x flaskApp.sh ```
+    $ python3.6 -m pip install Flask
+    $ python3.6 -m pip install Flask-Bootstrap
+    $ python3.6 -m pip install Flask-Script
+    
+Run the application:
 
-**create a directory of your project and copy the flaskApp.sh file to that destination then execute it from there responding to the prompts to have your desired configuration**
+    $ chmod a+x start.sh
+    $ ./start.sh
+    
+Testing the Application
+To run the tests for the class files:
 
-``` $ ./flaskApp.sh ```
+    $ python3.6 manage.py test
+    
+## Technologies Used
+1. Python 3.6
+2. Flask
 
-| *Option* | *Output* 
---- | --- 
-Should i create a README? | creates a README.md file
-create with bootstrap only | initialize bootstrap for use in the app
-create with: bootstrap and db | initialize bootstrap and SQLAlchemy in your app
-create with: bootstrap,db,authentication | initialize bootstrap, SQLAlchemy and auth blueprnt in your app
+## BDD
+|Behaviour	             | Input	                         | Output                                                |
+|------------------------|---------------------------------|-------------------------------------------------------|
+|View Categories	       | Click on category               | A list of pitches in that category is displayed       |
+|Add a new pitch         | click on pitch                  | Authentification page is displayed and user can pitch |
+|Add a comment           | Click on comment                | Comment form is displayed and user can comment        |
+|Upvote pitch            | Click on upvote                 | Pitch gets +1 upvote                                  |
+|Downvote pitch          | Click on downvote               | Pitche gets +1 downvote                               |
 
-### Disclaimer
-In the start.sh file it has been set to run on python3.6, change this to your python version
-This script doesnt create a database for you ,it just installs the neccesary packages required to integrate a db seamlessly in the app
+## Contact Information
+For any questions, troubleshooting or contributions, find me on:
+Email: kenmucciz8@gmail.com
 
-![Sample Structure](flaskStructure.png)
+## License
+MIT License Copyright (c) {2019} Kenneth Muchiri
