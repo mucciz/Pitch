@@ -1,5 +1,6 @@
 from . import db
 from werkzeug.security import generate_password_hash,check_password_hash
+from datetime import datetime
 
 class User(db.Model):
     __tablename__ = 'users'
@@ -16,7 +17,8 @@ class Pitch(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     pitch_title = db.Column(db.String(100),nullable=False)
     pitch_category = db.Column(db.String(255))
-    date_posted = db.Column(db.DateTime)
+    pitch_content = db.Column(db.String(255), nullable=False)
+    date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
     def __repr__(self):
-        return f'User {self.username}'
+        return f"Pitch {self.title}, {self.date_posted}, {self.image_file}"
